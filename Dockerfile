@@ -24,8 +24,9 @@ ENV VITE_SPREADSHEET_ID=$VITE_SPREADSHEET_ID
 ENV VITE_SHEET_NAME=$VITE_SHEET_NAME
 ENV VITE_SHEET_RANGE=$VITE_SHEET_RANGE
 
-# Build the application
-RUN npm run build
+# Copy and run build script
+COPY build.sh .
+RUN chmod +x build.sh && ./build.sh
 
 # Production stage
 FROM nginx:alpine
