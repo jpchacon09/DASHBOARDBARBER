@@ -1,9 +1,16 @@
 #!/bin/sh
 echo "Generando .env para el build..."
-echo "VITE_GOOGLE_API_KEY=${VITE_GOOGLE_API_KEY}" > .env
-echo "VITE_SPREADSHEET_ID=${VITE_SPREADSHEET_ID}" >> .env
-echo "VITE_SHEET_NAME=${VITE_SHEET_NAME}" >> .env
-echo "VITE_SHEET_RANGE=${VITE_SHEET_RANGE}" >> .env
+
+# Hardcoded values (temporal workaround for EasyPanel)
+cat > .env << 'EOF'
+VITE_GOOGLE_API_KEY=AIzaSyBD6S8zTScYhJfoxuE1KxpgftkyYcf_oeY
+VITE_SPREADSHEET_ID=1bs6Keuy9pbcDvunVM15SzSlVKVEDwGVuKwy6HQqN2a0
+VITE_SHEET_NAME=DATA
+VITE_SHEET_RANGE=A:Z
+EOF
+
 echo "Archivo .env generado:"
 cat .env
+echo ""
+echo "Iniciando build de Vite..."
 npm run build
