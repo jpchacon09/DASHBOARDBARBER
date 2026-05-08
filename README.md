@@ -59,7 +59,7 @@ cp .env.example .env
 Edita el archivo `.env` y añade tu API key:
 
 ```env
-VITE_GOOGLE_API_KEY=tu_api_key_aqui
+VITE_GOOGLE_API_KEY=
 ```
 
 ### 4. Configurar tu Google Sheet

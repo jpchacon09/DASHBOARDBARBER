@@ -46,7 +46,7 @@ git push -u origin main
    Agrega estas variables en EasyPanel:
 
    ```
-   VITE_GOOGLE_API_KEY=AIzaSyBD6S8zTScYhJfoxuE1KxpgftkyYcf_oeY
+   VITE_GOOGLE_API_KEY=<VITE_GOOGLE_API_KEY>
    VITE_SPREADSHEET_ID=1bs6Keuy9pbcDvunVM15SzSlVKVEDwGVuKwy6HQqN2a0
    VITE_SHEET_NAME=DATA
    VITE_SHEET_RANGE=A:Z
@@ -121,7 +121,7 @@ docker build -t barber-dashboard .
 ### Probar localmente:
 ```bash
 docker run -p 8080:80 \
-  -e VITE_GOOGLE_API_KEY=tu_api_key \
+  -e VITE_GOOGLE_API_KEY=${VITE_GOOGLE_API_KEY} \
   barber-dashboard
 ```
 

@@ -36,7 +36,7 @@ Por defecto está usando **datos de ejemplo** porque no tiene configurada la API
    - Clic en **"+ CREAR CREDENCIALES"**
    - Selecciona: **"Clave de API"**
    - Se generará una clave automáticamente
-   - **Copia la clave** (algo como: AIzaSyC...)
+   - **Copia la clave** (algo como: <VITE_GOOGLE_API_KEY>...)
 
 5. (Opcional pero recomendado) Restringir la clave:
    - Haz clic en la clave que acabas de crear
@@ -60,7 +60,7 @@ cp .env.example .env
 
 3. Reemplaza `tu_api_key_aqui` con la API key que copiaste:
 ```env
-VITE_GOOGLE_API_KEY=AIzaSyC...tu_clave_real_aqui
+VITE_GOOGLE_API_KEY=<VITE_GOOGLE_API_KEY>...tu_clave_real_aqui
 ```
 
 4. Guarda el archivo
